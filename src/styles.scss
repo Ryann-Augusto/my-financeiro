@@ -38,7 +38,15 @@ label{
 }
 
 .btn-primary{
+    color: #fff;
+    background-color: #4caf50;
+    border-color: #4caf50;
+    box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2),
+    0 1px 5px 0 rgba(156, 39, 176, 0.12);
 
+    cursor: pointer;
+    min-width: 150px;
+    width: auto;
 }
 
 .container-base{
@@ -67,18 +75,19 @@ label{
                 font-weight: 500;
             }
         }
-        .form-page{
+        .form-page {
             display: grid;
             justify-content: center;
-
-            .row{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-bottom: 16px;
-                .group-row{
-                    display: grid;
-                }
+      
+            .row {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding-bottom: 16px;
+      
+              .group-row {
+                display: grid;
+              }
             }
         }
     }

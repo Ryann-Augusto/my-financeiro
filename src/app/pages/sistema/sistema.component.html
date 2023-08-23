@@ -8,13 +8,21 @@
                 Cadastro de Sistemas
             </div>
         </div>
-        <div class="form-page">
+        <form class="form-page" [formGroup]="sistemaForm" (submit)="enviar()">
             <div class="row">
-                <div class="group-linha">
+                <div class="group-row">
                     <label>Sistema</label>
-                    <input type="text">
+                    <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" required>
+                    <label class="error-input" *ngIf="sistemaForm.get('name')?.errors?.['required'] &&
+                    sistemaForm.get('name')?.touched">Campo Obrigatório</label>
                 </div>
             </div>
-        </div>
+
+            <div class="row">
+                <div class="group-row">
+                    <input class="btn-primary" type="submit" value="Salvar">
+                </div>
+            </div>
+        </form>
     </div>
 </div>
