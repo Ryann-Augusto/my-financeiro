@@ -53,9 +53,6 @@ export class SistemaComponent {
     this.sistemaService.AdicionarSistemaFinanceiro(item)
     .subscribe((response: SistemaFinanceiro) => {
 
-      console.log(response)
-      console.log(response.Id)
-      
       this.sistemaForm.reset();
       
       this.sistemaService.CadastrarUsuarioNoSistema(response.Id, this.authService.getEmailUser())
